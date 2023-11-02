@@ -24,7 +24,7 @@ function App() {
       { type: "text/plain;charset=utf-8" }
     );
     FileSaver.saveAs(blob, file.name.replace('.har', '-sanitized.har'));
-  }, [])
+  }, [cookieConfig, tokensConfig])
 
   const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
@@ -65,6 +65,9 @@ function App() {
           </select>
         </div>
       </div>
+      <p>
+        Open sourced at <a href="https://github.com/jfromaniello/hars">hars</a>.
+      </p>
     </>
   )
 }
